@@ -8,9 +8,9 @@ namespace ExampleParser
 {
     class Program
     {
-        public static string ParseExternalReferences()
+        public static void ParseExternalReferences(string filePath)
         {
-            string json = File.ReadAllText("C:\\Users\\ssingh\\source\\repos\\ExampleParser\\storage.json");
+            string json = File.ReadAllText(filePath);
 
             var values = JsonSerializer.Deserialize<Dictionary<string, object>>(json);
             var parsedExamples = ParseExternalReferencesInternal(values);
@@ -20,9 +20,7 @@ namespace ExampleParser
                 WriteIndented = true
             };
             var finalJson = JsonSerializer.Serialize(parsedExamples, jsonSerializerOptions);
-            File.WriteAllText("C:\\Users\\ssingh\\source\\repos\\ExampleParser\\TextFile1.json", finalJson);
-
-            return finalJson;
+            File.WriteAllText(filePath, finalJson);
         }
 
         public static Dictionary<string, object> ParseExternalReferencesInternal(Dictionary<string, object> values)
@@ -96,7 +94,11 @@ namespace ExampleParser
 
         static void Main(string[] args)
         {
-            ParseExternalReferences();
+            if (args.Length < 1)
+            {
+                throw new ArgumentException("Please provide file path.");
+            }
+            ParseExternalReferences(args[0]);
         }
     }
 }

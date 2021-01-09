@@ -1,6 +1,13 @@
 {
   "paths": {
-    "key": "#https://raw.githubusercontent.com/sukhdev1103/OSI/master/temp.json"
+    "key": {
+      "Id": "22",
+      "TypeName": "TypeName",
+      "Value": "Value",
+      "RoleIds": [
+        "RoleIds"
+      ]
+    }
   },
   "paths1": {
     "/api/IdentityProviders/{identityProviderId}/ClaimTypeNames": {
@@ -36,7 +43,14 @@
           {
             "name": "skip",
             "in": "query",
-            "description": "#https://raw.githubusercontent.com/sukhdev1103/OSI/master/temp.json",
+            "description": {
+              "Id": "22",
+              "TypeName": "TypeName",
+              "Value": "Value",
+              "RoleIds": [
+                "RoleIds"
+              ]
+            },
             "schema": {
               "type": "integer",
               "format": "int32",
