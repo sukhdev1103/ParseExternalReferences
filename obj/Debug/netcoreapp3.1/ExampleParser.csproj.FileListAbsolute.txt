@@ -1,0 +1,13 @@
+C:\Users\ssingh\source\repos\ExampleParser\bin\Debug\netcoreapp3.1\ExampleParser.exe
+C:\Users\ssingh\source\repos\ExampleParser\bin\Debug\netcoreapp3.1\ExampleParser.deps.json
+C:\Users\ssingh\source\repos\ExampleParser\bin\Debug\netcoreapp3.1\ExampleParser.runtimeconfig.json
+C:\Users\ssingh\source\repos\ExampleParser\bin\Debug\netcoreapp3.1\ExampleParser.runtimeconfig.dev.json
+C:\Users\ssingh\source\repos\ExampleParser\bin\Debug\netcoreapp3.1\ExampleParser.dll
+C:\Users\ssingh\source\repos\ExampleParser\bin\Debug\netcoreapp3.1\ExampleParser.pdb
+C:\Users\ssingh\source\repos\ExampleParser\obj\Debug\netcoreapp3.1\ExampleParser.csprojAssemblyReference.cache
+C:\Users\ssingh\source\repos\ExampleParser\obj\Debug\netcoreapp3.1\ExampleParser.AssemblyInfoInputs.cache
+C:\Users\ssingh\source\repos\ExampleParser\obj\Debug\netcoreapp3.1\ExampleParser.AssemblyInfo.cs
+C:\Users\ssingh\source\repos\ExampleParser\obj\Debug\netcoreapp3.1\ExampleParser.dll
+C:\Users\ssingh\source\repos\ExampleParser\obj\Debug\netcoreapp3.1\ExampleParser.pdb
+C:\Users\ssingh\source\repos\ExampleParser\obj\Debug\netcoreapp3.1\ExampleParser.genruntimeconfig.cache
+C:\Users\ssingh\source\repos\ExampleParser\obj\Debug\netcoreapp3.1\ExampleParser.csproj.CoreCompileInputs.cache

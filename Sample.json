@@ -1,0 +1,62 @@
+{
+  "paths": {
+    "key": "#https://raw.githubusercontent.com/sukhdev1103/OSI/master/temp.json"
+  },
+  "paths1": {
+    "/api/IdentityProviders/{identityProviderId}/ClaimTypeNames": {
+      "get": {
+        "tags": [
+          "ClaimTypeNames"
+        ],
+        "summary": "Get all Identity Provider Claim Type Names for an Identity Provider.",
+        "operationId": "ClaimTypeNames_GetIdentityProviderClaimTypeNames",
+        "parameters": [
+          {
+            "name": "identityProviderId",
+            "in": "path",
+            "required": true,
+            "description": "Id of Identity Provider.",
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "description": "Query to execute. Currently not supported.",
+            "schema": {
+              "type": "string",
+              "default": "",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "description": "#https://raw.githubusercontent.com/sukhdev1103/OSI/master/temp.json",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            },
+            "x-position": 3
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "Maximum number of Identity Providers to return.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            },
+            "x-position": 4
+          }
+        ]
+      }
+    }
+  }
+}

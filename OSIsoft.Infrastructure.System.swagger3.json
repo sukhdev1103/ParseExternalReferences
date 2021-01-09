@@ -1,0 +1,5573 @@
+{
+  "x-generator": "NSwag v13.9.4.0 (NJsonSchema v10.3.1.0 (Newtonsoft.Json v12.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "My Title",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/Entitlements/{entitlementId}": {
+      "get": {
+        "tags": [
+          "Entitlement"
+        ],
+        "summary": "Retrieves a specific Entitlement by ID.",
+        "operationId": "Entitlement_GetEntitlement",
+        "parameters": [
+          {
+            "name": "entitlementId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Entitlement to retrieve.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The Entitlement with Id entitlementId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Entitlement"
+        ],
+        "summary": "Creates a new Entitlement.",
+        "operationId": "Entitlement_CreateEntitlement",
+        "parameters": [
+          {
+            "name": "entitlementId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the new Entitlement.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlement",
+          "description": "The Entitlement to create.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Entitlement"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The created Entitlement.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Entitlement"
+        ],
+        "summary": "Update the definition of a Entitlement.",
+        "operationId": "Entitlement_UpdateEntitlement",
+        "parameters": [
+          {
+            "name": "entitlementId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Entitlement to be updated.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlement",
+          "description": "The update details of the Entitlement.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Entitlement"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The updated or created Entitlement.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Entitlement"
+        ],
+        "summary": "Delete a Entitlement by id.",
+        "operationId": "Entitlement_DeleteEntitlement",
+        "parameters": [
+          {
+            "name": "entitlementId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Entitlement to be deleted.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "204 No Content on successful deletion.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Entitlements": {
+      "get": {
+        "tags": [
+          "Entitlement"
+        ],
+        "summary": "Retrieves all Entitlement.",
+        "operationId": "Entitlement_GetEntitlements",
+        "responses": {
+          "200": {
+            "description": "All Entitlement.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Entitlements/{entitlementDefinitionId}": {
+      "get": {
+        "tags": [
+          "EntitlementDefinition"
+        ],
+        "summary": "Retrieves a specific EntitlementDefinition by ID.",
+        "operationId": "EntitlementDefinition_GetEntitlementDefinition",
+        "parameters": [
+          {
+            "name": "entitlementDefinitionId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the EntitlementDefinition to retrieve.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The EntitlementDefinition with Id entitlementDefinitionId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EntitlementDefinition"
+        ],
+        "summary": "Creates a new EntitlementDefinition.",
+        "operationId": "EntitlementDefinition_CreateEntitlementDefinition",
+        "parameters": [
+          {
+            "name": "entitlementDefinitionId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the new EntitlementDefinition.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlementDefinition",
+          "description": "The EntitlementDefinition to create.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EntitlementDefinition"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The created EntitlementDefinition.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "EntitlementDefinition"
+        ],
+        "summary": "Update an EntitlementDefinition.",
+        "operationId": "EntitlementDefinition_UpdateEntitlementDefinition",
+        "parameters": [
+          {
+            "name": "entitlementDefinitionId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the EntitlementDefinition to be updated.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlementDefinition",
+          "description": "The update details of the EntitlementDefinition.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EntitlementDefinition"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The updated or created EntitlementDefinition.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EntitlementDefinition"
+        ],
+        "summary": "Delete an EntitlementDefinition by id.",
+        "operationId": "EntitlementDefinition_DeleteEntitlementDefinition",
+        "parameters": [
+          {
+            "name": "entitlementDefinitionId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the EntitlementDefinition to be deleted.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "204 No Content on successful deletion.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Entitlements": {
+      "get": {
+        "tags": [
+          "EntitlementDefinition"
+        ],
+        "summary": "Retrieves all EntitlementDefinition.",
+        "operationId": "EntitlementDefinition_GetEntitlementDefinitions",
+        "responses": {
+          "200": {
+            "description": "All EntitlementDefinition.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EntitlementSets/{setId}": {
+      "get": {
+        "tags": [
+          "EntitlementSet"
+        ],
+        "summary": "Retrieves a specific entitlement set by ID.",
+        "operationId": "EntitlementSet_GetEntitlementSet",
+        "parameters": [
+          {
+            "name": "setId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the set to retrieve.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The set with Id setId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EntitlementSet"
+        ],
+        "summary": "Creates a new entitlement set.",
+        "operationId": "EntitlementSet_CreateEntitlementSet",
+        "parameters": [
+          {
+            "name": "setId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the new set to create. ",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlementSet",
+          "description": "The EntitlementSet to create.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EntitlementSet"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The created set/&gt;.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "EntitlementSet"
+        ],
+        "summary": "Update the definition of an entitlement set.",
+        "operationId": "EntitlementSet_UpdateEntitlementSet",
+        "parameters": [
+          {
+            "name": "setId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the set to be updated.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlementSet",
+          "description": "The updated details of the EntitlementSet.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EntitlementSet"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The updated or created set.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EntitlementSet"
+        ],
+        "summary": "Delete an entitlement set by id.",
+        "operationId": "EntitlementSet_DeleteEntitlementSet",
+        "parameters": [
+          {
+            "name": "setId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the set to be deleted.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "204 No Content on successful deletion.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EntitlementSets": {
+      "get": {
+        "tags": [
+          "EntitlementSet"
+        ],
+        "summary": "Retrieves all entitlement sets.",
+        "operationId": "EntitlementSet_GetEntitlementSets",
+        "responses": {
+          "200": {
+            "description": "All sets.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/EntitlementSets/{setId}": {
+      "get": {
+        "tags": [
+          "EntitlementSetDefinition"
+        ],
+        "summary": "Retrieves a specific entitlement set definition by ID.",
+        "operationId": "EntitlementSetDefinition_GetEntitlementSetDefinition",
+        "parameters": [
+          {
+            "name": "setId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the set to retrieve.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The set with Id setId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EntitlementSetDefinition"
+        ],
+        "summary": "Creates a new entitlement set.",
+        "operationId": "EntitlementSetDefinition_CreateEntitlementSetDefinition",
+        "parameters": [
+          {
+            "name": "setId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the new set to create.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlementSetDefinition",
+          "description": "The EntitlementSet to create.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EntitlementSetDefinition"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The created set/&gt;.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "EntitlementSetDefinition"
+        ],
+        "summary": "Update the definition of an entitlement set.",
+        "operationId": "EntitlementSetDefinition_UpdateEntitlementSetDefinition",
+        "parameters": [
+          {
+            "name": "setId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the set to be updated.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlementSetDefinition",
+          "description": "The updated details of the EntitlementSet.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EntitlementSetDefinition"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The updated or created set.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EntitlementSetDefinition"
+        ],
+        "summary": "Delete an entitlement set definition by id.",
+        "operationId": "EntitlementSetDefinition_DeleteEntitlementSetDefinition",
+        "parameters": [
+          {
+            "name": "setId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the set definition to be deleted.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "204 No Content on successful deletion.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/EntitlementSets": {
+      "get": {
+        "tags": [
+          "EntitlementSetDefinition"
+        ],
+        "summary": "Retrieves all entitlement set definitions.",
+        "operationId": "EntitlementSetDefinition_GetEntitlementSetDefinitions",
+        "responses": {
+          "200": {
+            "description": "All set definitions.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/tenants/{tenantId}/bulk/entitlements/{setDefinitionId}": {
+      "post": {
+        "tags": [
+          "EntitlementSetInstance"
+        ],
+        "summary": "Assigns Entitlement Instances from specified Entitlement Set Definition to specified Tenant.",
+        "operationId": "EntitlementSetInstance_AssignTenantEntitlementSet",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "setDefinitionId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the entitlement set.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The set definition with Id setDefinitionId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Features": {
+      "get": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Retrieves all Feature.",
+        "operationId": "Feature_GetAll",
+        "responses": {
+          "200": {
+            "description": "An array of Feature objects.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Creates a new Feature.",
+        "operationId": "Feature_Create",
+        "requestBody": {
+          "x-name": "feature",
+          "description": "The Feature to be created.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feature"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "The created Feature.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Features": {
+      "get": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Retrieves all Feature.",
+        "operationId": "Feature_GetAll2",
+        "responses": {
+          "200": {
+            "description": "An array of Feature objects.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Creates a new Feature.",
+        "operationId": "Feature_Create2",
+        "requestBody": {
+          "x-name": "feature",
+          "description": "The Feature to be created.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feature"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "The created Feature.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Features/{id}": {
+      "get": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Retrieves a Feature by ID.",
+        "operationId": "Feature_Get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The feature identifier for the request.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The Feature with Id id.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Updates a Feature based on ID.",
+        "operationId": "Feature_Update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The Feature identifier for the request.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "feature",
+          "description": "The Feature for this request.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feature"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The updated Feature with Id id.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Deletes a Feature based on ID.",
+        "operationId": "Feature_Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Feature to be deleted.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 200 on success, other HTTP status codes on failure.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Features/{id}": {
+      "get": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Retrieves a Feature by ID.",
+        "operationId": "Feature_Get2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The feature identifier for the request.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The Feature with Id id.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Updates a Feature based on ID.",
+        "operationId": "Feature_Update2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The Feature identifier for the request.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "feature",
+          "description": "The Feature for this request.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feature"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The updated Feature with Id id.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Feature"
+        ],
+        "summary": "Deletes a Feature based on ID.",
+        "operationId": "Feature_Delete2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Feature to be deleted.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 200 on success, other HTTP status codes on failure.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Notification": {
+      "post": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Send a notification message.",
+        "operationId": "Notification_Notify",
+        "parameters": [
+          {
+            "name": "isServerTest",
+            "in": "query",
+            "description": "Whether or not the message should be considered a test message and, if so, treated only as a test by any recipients.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "notification",
+          "description": "The notification message to send.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Notification"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "A message indicating the result of the notification send if successfully accepted.",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Notification": {
+      "post": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Send a notification message.",
+        "operationId": "Notification_Notify2",
+        "parameters": [
+          {
+            "name": "isServerTest",
+            "in": "query",
+            "description": "Whether or not the message should be considered a test message and, if so, treated only as a test by any recipients.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "notification",
+          "description": "The notification message to send.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Notification"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "A message indicating the result of the notification send if successfully accepted.",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/AccessControl/Namespaces": {
+      "get": {
+        "tags": [
+          "RootAccessControl"
+        ],
+        "summary": "Retrieves the AccessControlList that is used to authorize access to a Namespace if none is specified during creation.",
+        "operationId": "RootAccessControl_GetRootNamespaceAcl",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the root  for  s.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessControlList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "\n            Could not retrieve the root  for  s due to missing or invalid input.\n            ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to retrieve the root  for  s.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "RootAccessControl"
+        ],
+        "summary": "Modifies the AccessControlList that is used to authorize access to a Namespace if none is specified during creation.",
+        "operationId": "RootAccessControl_SetRootNamespaceAcl",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to modify.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "newAccessControlList",
+          "description": "The new root AccessControlList for Namespace s.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessControlList"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the modified root  for  s.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessControlList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not modify the root  for  s due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to change the root  for  s.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/AccessControlValidation": {
+      "post": {
+        "tags": [
+          "RootAccessControl"
+        ],
+        "summary": "Validates a given AccessControlList.",
+        "operationId": "RootAccessControl_ValidateAcl",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "acl",
+          "description": "The AccessControlList to verify.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessControlList"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The validated AccessControlList.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Tenants/{tenantId}/AccessControlValidation": {
+      "post": {
+        "tags": [
+          "RootAccessControl"
+        ],
+        "summary": "Validates a given AccessControlList.",
+        "operationId": "RootAccessControl_ValidateAcl2",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "acl",
+          "description": "The AccessControlList to verify.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessControlList"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The validated AccessControlList.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/TrusteeValidation": {
+      "post": {
+        "tags": [
+          "RootAccessControl"
+        ],
+        "summary": "Validates a given Tenant owner Trustee.",
+        "operationId": "RootAccessControl_ValidateAccountTrustee",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "trustee",
+          "description": "The Trustee to verify.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Trustee"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The validated Trustee.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Tenants/{tenantId}/TrusteeValidation": {
+      "post": {
+        "tags": [
+          "RootAccessControl"
+        ],
+        "summary": "Validates a given Tenant owner Trustee.",
+        "operationId": "RootAccessControl_ValidateAccountTrustee2",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "trustee",
+          "description": "The Trustee to verify.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Trustee"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The validated Trustee.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Community/{communityId}/TrusteeValidation": {
+      "post": {
+        "tags": [
+          "RootAccessControl"
+        ],
+        "summary": "Validates a given Community owner Trustee.",
+        "operationId": "RootAccessControl_ValidateCommunityTrustee",
+        "parameters": [
+          {
+            "name": "communityId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Community to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "trustee",
+          "description": "The identifier of the Trustee to verify.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Trustee"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The validated Trustee.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Services/{id}": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Retrieves a service by its id.",
+        "operationId": "Service_GetService",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Service identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Service with id id.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Deletes a Service based on ID.",
+        "operationId": "Service_Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Service to be deleted.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 200 on success, other HTTP status codes on failure.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Services/{id}": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Retrieves a service by its id.",
+        "operationId": "Service_GetService2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Service identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Service with id id.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Deletes a Service based on ID.",
+        "operationId": "Service_Delete2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Service to be deleted.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 200 on success, other HTTP status codes on failure.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Services": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Retrieves all the services.",
+        "operationId": "Service_GetAllServices",
+        "responses": {
+          "200": {
+            "description": "A list of all services.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Creates a new Service.",
+        "operationId": "Service_Create",
+        "requestBody": {
+          "x-name": "service",
+          "description": "The Service to be created.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Service"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "The created Service.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Services": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Retrieves all the services.",
+        "operationId": "Service_GetAllServices2",
+        "responses": {
+          "200": {
+            "description": "A list of all services.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Creates a new Service.",
+        "operationId": "Service_Create2",
+        "requestBody": {
+          "x-name": "service",
+          "description": "The Service to be created.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Service"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "The created Service.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/SignupRequests": {
+      "get": {
+        "tags": [
+          "SignupRequests"
+        ],
+        "summary": "Get all outstanding signup requests.",
+        "operationId": "SignupRequests_GetOutstandingSignupRequests",
+        "responses": {
+          "200": {
+            "description": "An array of SignupRequestModel objects.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SignupRequests"
+        ],
+        "summary": "Submit a new signup request.",
+        "operationId": "SignupRequests_Post",
+        "requestBody": {
+          "x-name": "signupRequest",
+          "description": "The SignupRequestModel for this request.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignupRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 202 Accepted.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/SignupRequests/Count": {
+      "get": {
+        "tags": [
+          "SignupRequests"
+        ],
+        "summary": "Get a count of all outstanding signup requests.",
+        "operationId": "SignupRequests_GetOutstandingSignupRequestsCount",
+        "responses": {
+          "200": {
+            "description": "An integer value representing the number of outstanding SignUp requests.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/SignupRequests/{id}": {
+      "get": {
+        "tags": [
+          "SignupRequests"
+        ],
+        "summary": "Get a Signup request by it's id.",
+        "operationId": "SignupRequests_GetSignupRequest",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Signup id.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A SignupRequestModel by it's Id id.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "SignupRequests"
+        ],
+        "summary": "Submit an updated signup request.",
+        "operationId": "SignupRequests_Update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The Signup request identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "model",
+          "description": "The Signup request model to use for the update.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignupRequestModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "SignupRequests"
+        ],
+        "summary": "Approves a signup request to continue provisioning.",
+        "operationId": "SignupRequests_SubmitSignupReview",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Signup request identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Accepted.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "SignupRequests"
+        ],
+        "summary": "Delete a signup request.",
+        "operationId": "SignupRequests_Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The Signup request identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 200 on success, other HTTP status codes on failure.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/SignupRequests/{id}/Reset": {
+      "post": {
+        "tags": [
+          "SignupRequests"
+        ],
+        "summary": "Reset errored signup request.",
+        "operationId": "SignupRequests_ResetSignupError",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The Signup request identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The SignupRequestModel after error reset.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}": {
+      "get": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Retrieves a specific Tenant by ID.",
+        "operationId": "Tenant_GetTenant",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Tenant to retrieve.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the  with the specified tenant ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tenant"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not retrieve the specified  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to retrieve this .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Checks if a Tenant with a specific ID exists.",
+        "operationId": "Tenant_TenantExists",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Tenant for this request.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "A  with the specified ID exists."
+          },
+          "400": {
+            "description": "Could not check if the specified  exists due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "A  with the specified ID was not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Updates a specified Tenant object.",
+        "operationId": "Tenant_UpdateTenant",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Tenant to update.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "tenant",
+          "description": "The updated details of the Tenant.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tenant"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the updated .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tenant"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not update the  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to update the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Purges the Tenant.",
+        "operationId": "Tenant_Delete",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Tenant to delete.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Accepted.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants": {
+      "get": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Retrieves all Tenant s.",
+        "operationId": "Tenant_GetAllTenants",
+        "parameters": [
+          {
+            "name": "active",
+            "in": "query",
+            "description": "Specifies to only include active Tenant s.",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of all Tenant s.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Tenants": {
+      "get": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Retrieves all Tenant s.",
+        "operationId": "Tenant_GetAllTenants2",
+        "parameters": [
+          {
+            "name": "active",
+            "in": "query",
+            "description": "Specifies to only include active Tenant s.",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of all Tenant s.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Tenants/{tenantId}": {
+      "put": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Updates a specified Tenant object.",
+        "operationId": "Tenant_UpdateTenantState",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Tenant to update.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "tenant",
+          "description": "The updated details of the Tenant.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tenant"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the updated .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tenant"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not update the  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to update the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Purges the Tenant.",
+        "operationId": "Tenant_Delete2",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Tenant to delete.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Accepted.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Tenants/{tenantId}/ExternalAccountId": {
+      "put": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Updates External Account Id in a specified Tenant object.",
+        "operationId": "Tenant_UpdateExternalAccountId",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Tenant to update.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "externalAccountId",
+          "description": "The updated External Account Id of the Tenant.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the updated External Account Id.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not update the  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to update the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/Icon": {
+      "get": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Returns an icon specified by its Tenant ID.",
+        "operationId": "Tenant_GetTenantIcon",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Tenant for this request.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the Base64 encoded PNG icon string of the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not retrieve the  icon due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to retrieve the specified  icon.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Creates or updates the icon for a Tenant. Note that the icon size must be less than\nMaxIconSizeInBytes.",
+        "operationId": "Tenant_CreateOrUpdateTenantIcon",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Tenant identifier for this request.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "icon",
+          "description": "The Base64 encoded PNG icon for the Tenant.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the new/updated Base64 encoded PNG icon string specified in the request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not create/update the  icon due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to create/update the specified  icon.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Tenant"
+        ],
+        "summary": "Deletes the icon for a Tenant.",
+        "operationId": "Tenant_DeleteTenantIcon",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Tenant identifier for this request.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The  icon was deleted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not delete the  icon due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to delete the specified  icon.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tenants/{tenantId}/entitlements": {
+      "get": {
+        "tags": [
+          "TenantEntitlement"
+        ],
+        "summary": "Retrieves all TenantEntitlement of the tenant.",
+        "operationId": "TenantEntitlement_GetTenantEntitlements",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns all the  belong to the  with specified tenant ID.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TenantEntitlement"
+        ],
+        "summary": "Update the definition of one or more TenantEntitlement of the specified tenant.",
+        "operationId": "TenantEntitlement_UpdateTenantEntitlement",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlementsDict",
+          "description": "The updated details of the tenant entitlement.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {}
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "All the TenantEntitlement of tenant with TenantId tenantId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tenants/{tenantId}/entitlements/{entitlementId}/manualblock": {
+      "get": {
+        "tags": [
+          "TenantEntitlement"
+        ],
+        "summary": "Get the TenantEntitlementManualBlock of the tenant entitlement.",
+        "operationId": "TenantEntitlement_GetManualBlock",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "entitlementId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Entitlement.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the  for the  with specified tenant Id and entitlement Id.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TenantEntitlement"
+        ],
+        "summary": "Update the TenantEntitlementManualBlock of the tenant entitlement.",
+        "operationId": "TenantEntitlement_UpdateManualBlock",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "entitlementId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Entitlement.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "tenantEntitlementManualBlock",
+          "description": "The new TenantEntitlementManualBlock for the TenantEntitlement.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TenantEntitlementManualBlock"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the updated  for the  with specified tenant Id and entitlement Id.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/tenants/{tenantId}/entitlements": {
+      "get": {
+        "tags": [
+          "TenantEntitlementInstance"
+        ],
+        "summary": "Retrieves all TenantEntitlementInstance of the tenant.",
+        "operationId": "TenantEntitlementInstance_GetTenantEntitlementInstances",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns all the  belong to the  with specified tenant ID.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TenantEntitlementInstance"
+        ],
+        "summary": "Update the definition of one or more TenantEntitlementInstance of the specified tenant.",
+        "operationId": "TenantEntitlementInstance_UpdateTenantEntitlementInstances",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "entitlementInstances",
+          "description": "The updated entitlement instances.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TenantEntitlementInstance"
+                }
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "All the TenantEntitlementInstance of tenant with TenantId tenantId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/tenants/{tenantId}/entitlements/{entitlementDefinitionId}/manualblock": {
+      "get": {
+        "tags": [
+          "TenantEntitlementInstance"
+        ],
+        "summary": "Get the TenantEntitlementInstanceManualBlock of the entitlement instance.",
+        "operationId": "TenantEntitlementInstance_GetManualBlock",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "entitlementDefinitionId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the EntitlementDefinition.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "\n            Returns the  for the  with specified tenant Id and entitlement\n            definition Id.\n            ",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TenantEntitlementInstance"
+        ],
+        "summary": "Update the TenantEntitlementInstanceManualBlock of the tenant entitlement.",
+        "operationId": "TenantEntitlementInstance_UpdateManualBlock",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the Tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "entitlementDefinitionId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the EntitlementDefinition.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "tenantEntitlementInstanceManualBlock",
+          "description": "The new TenantEntitlementInstanceManualBlock for the TenantEntitlementInstance.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TenantEntitlementInstanceManualBlock"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": "\n            Returns the updated  for the  with specified tenant Id and\n            entitlement Id.\n            ",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tenants/{tenantId}/bulk/entitlements/{setId}": {
+      "post": {
+        "tags": [
+          "TenantEntitlementSet"
+        ],
+        "summary": "Assigns Entitlements from specified Entitlement Set to Tenant Entitlements of specified Tenant.",
+        "operationId": "TenantEntitlementSet_AssignTenantEntitlementSet",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the tenant.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "setId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the entitlement set.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The set with Id setId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/Features": {
+      "get": {
+        "tags": [
+          "TenantFeatureState"
+        ],
+        "summary": "Retrieves all FeatureState s for the specified Tenant.",
+        "operationId": "TenantFeatureState_GetAll",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a list of  s for the specified account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FeatureState"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unable to retrieve  s due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to retrieve  s for the specified account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/Features/{id}": {
+      "get": {
+        "tags": [
+          "TenantFeatureState"
+        ],
+        "summary": "Retrieves a FeatureState with the specified ID from a Tenant.",
+        "operationId": "TenantFeatureState_Get",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the FeatureState to retrieve.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the  of the specified account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeatureState"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unable to retrieve the  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to retrieve the  of the specified account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TenantFeatureState"
+        ],
+        "summary": "Sets the specified FeatureState of a Tenant.",
+        "operationId": "TenantFeatureState_Set",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the FeatureState to set.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "tenantFeatureState",
+          "description": "The new details for the specified FeatureState.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TenantFeatureState"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": "The updated FeatureState.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Tenants/{tenantId}/Features/{id}": {
+      "put": {
+        "tags": [
+          "TenantFeatureState"
+        ],
+        "summary": "Sets the specified FeatureState of a Tenant.",
+        "operationId": "TenantFeatureState_Set2",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the FeatureState to set.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "tenantFeatureState",
+          "description": "The new details for the specified FeatureState.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TenantFeatureState"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": "The updated FeatureState.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TenantServiceState/{tenantId}/{serviceId}/{operationId}": {
+      "get": {
+        "tags": [
+          "TenantServiceState"
+        ],
+        "summary": "Return a single TenantServiceState by tenant ID, service ID, and operation ID.",
+        "operationId": "TenantServiceState_GetTenantServiceState",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Tenant identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "serviceId",
+            "in": "path",
+            "required": true,
+            "description": "The Service identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "description": "The operationId associated with this operation.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The TenantServiceState matching a tenantId, serviceId and operationId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/TenantServiceState/{tenantId}/{serviceId}/{operationId}": {
+      "get": {
+        "tags": [
+          "TenantServiceState"
+        ],
+        "summary": "Return a single TenantServiceState by tenant ID, service ID, and operation ID.",
+        "operationId": "TenantServiceState_GetTenantServiceState2",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The Tenant identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "serviceId",
+            "in": "path",
+            "required": true,
+            "description": "The Service identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "description": "The operationId associated with this operation.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The TenantServiceState matching a tenantId, serviceId and operationId.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TenantServiceStates": {
+      "get": {
+        "tags": [
+          "TenantServiceState"
+        ],
+        "summary": "Returns all TenantServiceState objects matching either tenant ID, service ID, operation ID, multiple IDs, or none.",
+        "operationId": "TenantServiceState_GetTenantServiceStates",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "query",
+            "description": "The Tenant identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "serviceId",
+            "in": "query",
+            "description": "The Service identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "operationId",
+            "in": "query",
+            "description": "The operationId associated with this operation.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of TenantServiceState objects.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/TenantServiceStates": {
+      "get": {
+        "tags": [
+          "TenantServiceState"
+        ],
+        "summary": "Returns all TenantServiceState objects matching either tenant ID, service ID, operation ID, multiple IDs, or none.",
+        "operationId": "TenantServiceState_GetTenantServiceStates2",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "query",
+            "description": "The Tenant identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "serviceId",
+            "in": "query",
+            "description": "The Service identifier.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "operationId",
+            "in": "query",
+            "description": "The operationId associated with this operation.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of TenantServiceState objects.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TenantServiceStates/Count": {
+      "get": {
+        "tags": [
+          "TenantServiceState"
+        ],
+        "summary": "Gets the count of all TenantServiceState objects ID, both, or none.",
+        "operationId": "TenantServiceState_GetTenantServiceStateCount",
+        "responses": {
+          "200": {
+            "description": "A count of the number of TenantServiceStates.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/TenantServiceStates/Count": {
+      "get": {
+        "tags": [
+          "TenantServiceState"
+        ],
+        "summary": "Gets the count of all TenantServiceState objects ID, both, or none.",
+        "operationId": "TenantServiceState_GetTenantServiceStateCount2",
+        "responses": {
+          "200": {
+            "description": "A count of the number of TenantServiceStates.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TenantServiceStates/ResendNotifications": {
+      "put": {
+        "tags": [
+          "TenantServiceState"
+        ],
+        "summary": "To resend all the notifications.",
+        "operationId": "TenantServiceState_ResendNotifications",
+        "requestBody": {
+          "x-name": "tenantServiceStates",
+          "description": "The list of TenantServiceState.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TenantServiceState"
+                }
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 202 Accepted.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/TenantServiceStates/ResendNotifications": {
+      "put": {
+        "tags": [
+          "TenantServiceState"
+        ],
+        "summary": "To resend all the notifications.",
+        "operationId": "TenantServiceState_ResendNotifications2",
+        "requestBody": {
+          "x-name": "tenantServiceStates",
+          "description": "The list of TenantServiceState.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TenantServiceState"
+                }
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 202 Accepted.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/testing/notifications": {
+      "post": {
+        "tags": [
+          "Testing"
+        ],
+        "summary": "Creates a test notification message and sends it to all registered services.",
+        "operationId": "Testing_CreateTestNotification",
+        "requestBody": {
+          "x-name": "message",
+          "description": "Test notification message to create.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationsTestMessage"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 200 on success, other HTTP status codes on failure.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/testing/notifications": {
+      "post": {
+        "tags": [
+          "Testing"
+        ],
+        "summary": "Creates a test notification message and sends it to all registered services.",
+        "operationId": "Testing_CreateTestNotification2",
+        "requestBody": {
+          "x-name": "message",
+          "description": "Test notification message to create.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationsTestMessage"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "HTTP status code - 200 on success, other HTTP status codes on failure.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Utilities/ping": {
+      "get": {
+        "tags": [
+          "Utilities"
+        ],
+        "summary": "Ping the System Service. Note that this call requires an authenticated caller.",
+        "operationId": "Utilities_Ping",
+        "responses": {
+          "200": {
+            "description": "The Client Id of the calling client.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/Utilities/ping": {
+      "get": {
+        "tags": [
+          "Utilities"
+        ],
+        "summary": "Ping the System Service. Note that this call requires an authenticated caller.",
+        "operationId": "Utilities_Ping2",
+        "responses": {
+          "200": {
+            "description": "The Client Id of the calling client.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/Namespaces": {
+      "get": {
+        "tags": [
+          "Namespace"
+        ],
+        "summary": "Returns all Namespace s owned by the specified Tenant that the caller has access to.",
+        "operationId": "Namespace_GetAll",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "region",
+            "in": "query",
+            "description": "The region in which namespaces should be filtered.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "\n            Returns a list of all  objects for the specified  that the caller has access to.\n            ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Namespace"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not retrieve  s due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to access the tenant's  s.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/Namespaces/{namespaceId}": {
+      "get": {
+        "tags": [
+          "Namespace"
+        ],
+        "summary": "Returns a Namespace with the specified Id.",
+        "operationId": "Namespace_GetNamespaceById",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Namespace to return.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a  object with the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Namespace"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not retrieve the  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to access this .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": " not found in the specified account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Namespace"
+        ],
+        "summary": "Creates a new Namespace in the specified Tenant.",
+        "operationId": "Namespace_Create",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The account identifier where the Namespace will be created.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "isServerTest",
+            "in": "query",
+            "description": "This parameter is unused and will be removed in the next API version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-position": 3
+          },
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "required": true,
+            "description": "The Id of the new Namespace. The Id can also be specified in the namespaceToCreate. If it is omitted in both, the Id will\nbe generated.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 4
+          }
+        ],
+        "requestBody": {
+          "x-name": "namespaceToCreate",
+          "description": "The new Namespace to be created.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Namespace"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "201": {
+            "description": "Returns the created  object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Namespace"
+                }
+              }
+            }
+          },
+          "302": {
+            "description": "Returns the location of the existing  object."
+          },
+          "400": {
+            "description": "Could not create the  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to create a  in this account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "A  already exists with different values.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Namespace"
+        ],
+        "summary": "Updates Namespace information: Description and TierId. The AccessControlList and Owner's Trustee can only be\nupdated through their own routes.",
+        "operationId": "Namespace_Update",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Namespace to update.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "newProperties",
+          "description": "The new details to store for the Namespace.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Namespace"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the updated .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Namespace"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not update the  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to update the .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Namespace"
+        ],
+        "summary": "Deletes a Namespace in the specified Tenant.",
+        "operationId": "Namespace_Delete",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Namespace to delete.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "isServerTest",
+            "in": "query",
+            "description": "This parameter is unused and will be removed in the next API version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The  was deleted."
+          },
+          "400": {
+            "description": "Could not delete the  due to an invalid state.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to delete the .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/Namespaces/{namespaceId}/accesscontrol": {
+      "get": {
+        "tags": [
+          "Namespace"
+        ],
+        "summary": "Returns the AccessControlList that is used to authorize access to a Namespace.",
+        "operationId": "Namespace_GetAccessControl",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Namespace to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the  for the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessControlList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not retrieve the  of the specified  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to get the  for the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Namespace"
+        ],
+        "summary": "Updates the AccessControlList that is used to authorize access to a Namespace.",
+        "operationId": "Namespace_SetAccessControl",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Namespace to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "newAccessControlList",
+          "description": "The updated AccessControlList for the Namespace.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccessControlList"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the updated .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccessControlList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not update the  of the specified  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to update the  for the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tenants/{tenantId}/Namespaces/{namespaceId}/owner": {
+      "get": {
+        "tags": [
+          "Namespace"
+        ],
+        "summary": "Returns the Owner's Trustee for a given Namespace.",
+        "operationId": "Namespace_GetOwner",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Namespace to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the Owner's  of the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Trustee"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not retrieve the Owner's  of the specified  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to get the Owner's  of the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Namespace"
+        ],
+        "summary": "Changes the Owner's Trustee for a given Namespace.",
+        "operationId": "Namespace_SetOwner",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the account to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "namespaceId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the Namespace to access.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "newOwner",
+          "description": "The new Owner's Trustee of the Namespace.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Trustee"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the new Owner's  of the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Trustee"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not change the Owner's  of the specified  due to missing or invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to change the Owner's  of the specified .",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed at this base URL. Try the request again at the Global base URL.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Entitlement": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of an entitlement.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets the identifier for the Entitlement.",
+            "nullable": true
+          },
+          "entitlementType": {
+            "description": "Gets or sets the type of the Entitlement.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/EntitlementType"
+              }
+            ]
+          },
+          "limitType": {
+            "description": "Gets or sets the limit type of the Entitlement.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LimitType"
+              }
+            ]
+          },
+          "defaultValue": {
+            "description": "Gets or sets the default value of the Entitlement.",
+            "nullable": true
+          }
+        }
+      },
+      "EntitlementType": {
+        "type": "integer",
+        "description": "The type of entitlement.",
+        "x-enumNames": [
+          "Feature",
+          "Resource",
+          "Usage"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "LimitType": {
+        "type": "integer",
+        "description": "The limit type of entitlement.",
+        "x-enumNames": [
+          "Hard",
+          "Soft"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "EntitlementDefinition": {
+        "type": "object",
+        "description": "The definition for an entitlement.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets the identifier.",
+            "nullable": true
+          },
+          "entitlementType": {
+            "description": "Gets or sets the entitlement type.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/EntitlementType"
+              }
+            ]
+          },
+          "limitType": {
+            "description": "Gets or sets the limit type.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LimitType"
+              }
+            ]
+          },
+          "defaultValue": {
+            "type": "integer",
+            "description": "Gets or sets the default value.",
+            "format": "int32"
+          }
+        }
+      },
+      "EntitlementSet": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of an EntitlementSet.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets the identifier of the EntitlementSet.",
+            "nullable": true
+          },
+          "entitlements": {
+            "type": "object",
+            "description": "Gets the Entitlements with identifiers and corresponding values for the EntitlementSets.",
+            "nullable": true,
+            "additionalProperties": {}
+          }
+        }
+      },
+      "EntitlementSetDefinition": {
+        "type": "object",
+        "description": "The definition of an entitlement set.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets the identifier.",
+            "nullable": true
+          },
+          "entitlementInstances": {
+            "type": "array",
+            "description": "Gets or sets the entitlement instances.",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TenantEntitlementInstance"
+            }
+          }
+        }
+      },
+      "TenantEntitlementInstance": {
+        "type": "object",
+        "description": "An instance of an entitlement.",
+        "additionalProperties": false,
+        "properties": {
+          "entitlementDefinitionId": {
+            "type": "string",
+            "description": "Gets or sets the identifier of the corresponding entitlement definition.",
+            "nullable": true
+          },
+          "entitlementType": {
+            "description": "Gets or sets the EntitlementType.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/EntitlementType"
+              }
+            ]
+          },
+          "limitType": {
+            "description": "Gets or sets the Limit type.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LimitType"
+              }
+            ]
+          },
+          "value": {
+            "type": "integer",
+            "description": "Gets or sets the value.",
+            "format": "int32"
+          },
+          "manualBlockStatus": {
+            "type": "boolean",
+            "description": "Gets or sets the status."
+          }
+        }
+      },
+      "Feature": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of a Feature.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets identifier of this Feature.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets name of the Feature.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Gets or sets description of the Feature.",
+            "nullable": true
+          },
+          "defaultState": {
+            "type": "integer",
+            "description": "Gets or sets default state of the Feature.",
+            "format": "int32"
+          }
+        }
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "additionalProperties": {
+          "nullable": true
+        },
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          },
+          "extensions": {
+            "type": "object",
+            "nullable": true,
+            "additionalProperties": {}
+          }
+        }
+      },
+      "Notification": {
+        "type": "object",
+        "description": "An object passed to Notify.",
+        "x-abstract": true,
+        "additionalProperties": false
+      },
+      "AccessControlList": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "roleTrusteeAccessControlEntries": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/AccessControlEntry"
+            }
+          }
+        }
+      },
+      "AccessControlEntry": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "trustee": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Trustee"
+              }
+            ]
+          },
+          "accessType": {
+            "$ref": "#/components/schemas/AccessType"
+          },
+          "accessRights": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "Trustee": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/TrusteeType"
+          },
+          "objectId": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenantId": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "TrusteeType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "User",
+          "Client",
+          "Role"
+        ],
+        "enum": [
+          1,
+          2,
+          3
+        ]
+      },
+      "AccessType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Allowed",
+          "Denied"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "Service": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of a Service.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets identifier of this Service.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets service Name.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Gets or sets description of Service.",
+            "nullable": true
+          },
+          "region": {
+            "description": "Gets or sets region identifier.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Region"
+              }
+            ]
+          },
+          "notificationTopicName": {
+            "type": "string",
+            "description": "Gets or sets name of the Notification Topic for the Service.",
+            "nullable": true
+          },
+          "notificationSubscriptionName": {
+            "type": "string",
+            "description": "Gets or sets name of the Notification Subscription for the Service.",
+            "nullable": true
+          },
+          "notificationNamespace": {
+            "type": "string",
+            "description": "Gets or sets namespace of the Notification namespace for the Service.",
+            "nullable": true
+          },
+          "notificationResponseQueueName": {
+            "type": "string",
+            "description": "Gets or sets name of the NotificationResponseQueue for the Service.",
+            "nullable": true
+          },
+          "notificationListenerKeyName": {
+            "type": "string",
+            "description": "Gets or sets name of the NotificationQueueListenerKey for the Service.",
+            "nullable": true
+          },
+          "notificationListenerKey": {
+            "type": "string",
+            "description": "Gets or sets key for the NotificationListener for the Service.",
+            "nullable": true
+          },
+          "notificationSenderKeyName": {
+            "type": "string",
+            "description": "Gets or sets name of the NotificationQueueSenderKey for the Service.",
+            "nullable": true
+          },
+          "notificationSenderKey": {
+            "type": "string",
+            "description": "Gets or sets key for the NotificationQueueSender for the Service.",
+            "nullable": true
+          }
+        }
+      },
+      "Region": {
+        "type": "integer",
+        "description": "Values describing the regions in which a Namespace may be provisioned.",
+        "x-enumNames": [
+          "WestUS",
+          "WestEurope"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "SignupRequestModel": {
+        "type": "object",
+        "description": "Tenant / Account sign up request Data Transfer Object model.",
+        "additionalProperties": false,
+        "required": [
+          "firstName",
+          "lastName",
+          "contactEmail",
+          "companyName",
+          "companyAlias"
+        ],
+        "properties": {
+          "signupId": {
+            "type": "string",
+            "description": "Gets or sets the signup identifier.",
+            "nullable": true
+          },
+          "firstName": {
+            "title": "First name",
+            "type": "string",
+            "description": "Gets or sets the first name.",
+            "maxLength": 48,
+            "minLength": 0
+          },
+          "lastName": {
+            "title": "Last name",
+            "type": "string",
+            "description": "Gets or sets the last name.",
+            "maxLength": 48,
+            "minLength": 0
+          },
+          "contactEmail": {
+            "title": "Contact email",
+            "type": "string",
+            "description": "Gets or sets the contact email.",
+            "format": "email",
+            "minLength": 1
+          },
+          "contactPhone": {
+            "title": "Phone number (optional)",
+            "type": "string",
+            "description": "Gets or sets the contact phone.",
+            "format": "phone",
+            "default": "",
+            "nullable": true
+          },
+          "companyName": {
+            "title": "Company name",
+            "type": "string",
+            "description": "Gets or sets the name of the company.",
+            "maxLength": 80,
+            "minLength": 0
+          },
+          "companyAlias": {
+            "title": "Company alias",
+            "type": "string",
+            "description": "Gets or sets the company alias.",
+            "maxLength": 32,
+            "minLength": 0,
+            "pattern": "^(?:[A-Za-z0-9][\\w-]+)$"
+          },
+          "consentEmail": {
+            "title": "Azure AD Tenant Administrator email",
+            "type": "string",
+            "description": "Gets or sets the consent email.",
+            "format": "email",
+            "nullable": true
+          },
+          "consentFirstName": {
+            "title": "Azure AD Tenant Administrator first name",
+            "type": "string",
+            "description": "Gets or sets the first name of the consent.",
+            "maxLength": 48,
+            "minLength": 0,
+            "nullable": true
+          },
+          "consentLastName": {
+            "title": "Azure AD Tenant Administrator last name",
+            "type": "string",
+            "description": "Gets or sets the last name of the consent.",
+            "maxLength": 48,
+            "minLength": 0,
+            "nullable": true
+          },
+          "isCloudConnectCustomer": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is cloud connect customer."
+          },
+          "identityProvider": {
+            "type": "string",
+            "description": "Gets or sets the identity provider.",
+            "nullable": true
+          },
+          "ignoreExistingItems": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether [ignore existing items]."
+          },
+          "status": {
+            "description": "Gets or sets the status.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/SignupStatus"
+              }
+            ]
+          },
+          "created": {
+            "type": "string",
+            "description": "Gets or sets the created.",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "description": "Gets or sets the date of update.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "tenantId": {
+            "type": "string",
+            "description": "Gets or sets the tenant identifier.",
+            "pattern": "^(?:[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12})$",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "description": "Gets or sets the sign-up request notes.",
+            "maxLength": 1024,
+            "minLength": 0,
+            "nullable": true
+          },
+          "aadDomain": {
+            "title": "AAD Domain",
+            "type": "string",
+            "description": "Gets or sets the AAD domain.",
+            "maxLength": 63,
+            "minLength": 0,
+            "nullable": true
+          },
+          "aadConsentTypes": {
+            "title": "AAD Consent Types",
+            "type": "string",
+            "description": "List of AAD Consent Types separated by semicolon.",
+            "maxLength": 48,
+            "minLength": 0,
+            "nullable": true
+          },
+          "entitlements": {
+            "title": "Entitlements",
+            "type": "array",
+            "description": "Gets or sets the sequence of tenant entitlements.",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/SignupRequestEntitlement"
+            }
+          },
+          "externalAccountId": {
+            "type": "string",
+            "description": "Gets or sets the External Account ID.",
+            "maxLength": 128,
+            "minLength": 0,
+            "nullable": true
+          },
+          "subscriptionStartDate": {
+            "type": "string",
+            "description": "Gets or sets the start date of subscription.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "subscriptionEndDate": {
+            "type": "string",
+            "description": "Gets or sets the end date of subscription.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "Gets or sets transaction id.",
+            "maxLength": 128,
+            "minLength": 0,
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "description": "Gets or sets error message.",
+            "nullable": true
+          }
+        }
+      },
+      "SignupStatus": {
+        "type": "integer",
+        "description": "Tenant / account sign up statuses.",
+        "x-enumNames": [
+          "NotProcessed",
+          "SignupSubmitted",
+          "SignupReceived_WaitingForReview",
+          "ReviewSubmitted",
+          "ReviewReceived_WaitingForServices",
+          "ServicesResponded_WaitingForInvitation",
+          "InvitationReceived_WaitingForCompletion",
+          "ProvisioningComplete",
+          "ProvisioningError"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          99
+        ]
+      },
+      "SignupRequestEntitlement": {
+        "type": "object",
+        "description": "Represents an entitlement value posted in signup request.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets the identifier for the Entitlement.",
+            "nullable": true
+          },
+          "value": {
+            "type": "integer",
+            "description": "Gets or sets the value of the Entitlement.",
+            "format": "int32"
+          }
+        }
+      },
+      "Tenant": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of a Tenant.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets identifier of this Tenant.",
+            "nullable": true
+          },
+          "companyName": {
+            "type": "string",
+            "description": "Gets or sets company Name of this Tenant.",
+            "nullable": true
+          },
+          "state": {
+            "description": "Gets or sets current Tenant Provisioning State for this Tenant.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/TenantProvisioningState"
+              }
+            ]
+          },
+          "created": {
+            "type": "string",
+            "description": "Gets or sets date and time this Tenant was added to OCS.",
+            "format": "date-time"
+          },
+          "lastUpdated": {
+            "type": "string",
+            "description": "Gets or sets date this Tenant was last updated.",
+            "format": "date-time"
+          },
+          "alias": {
+            "type": "string",
+            "description": "Gets or sets specifies a unique alias for this Tenant.",
+            "nullable": true
+          },
+          "features": {
+            "type": "array",
+            "description": "Gets or sets list of Feature States for this Tenant. Returned during get calls.",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/FeatureState"
+            }
+          },
+          "externalAccountId": {
+            "type": "string",
+            "description": "Gets or sets the external account id for this Tenant.",
+            "nullable": true
+          }
+        }
+      },
+      "TenantProvisioningState": {
+        "type": "integer",
+        "description": "Status codes describing a Tenant's current Provisioning State.",
+        "x-enumNames": [
+          "Creating",
+          "Active",
+          "Deactivating",
+          "Deactivated",
+          "Reactivating",
+          "Deleting",
+          "Deleted",
+          "Purging",
+          "IsHomeTenant"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "FeatureState": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of a Feature State.",
+        "additionalProperties": false,
+        "properties": {
+          "feature": {
+            "description": "Gets or sets feature for the Feature State.",
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Feature"
+              }
+            ]
+          },
+          "currentState": {
+            "type": "integer",
+            "description": "Gets or sets current state of the feature.",
+            "format": "int32"
+          }
+        }
+      },
+      "TenantEntitlementManualBlock": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of a tenant entitlement's manual block.",
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "type": "boolean",
+            "description": "Flag denoting whether a manual block is active."
+          }
+        }
+      },
+      "TenantEntitlementInstanceManualBlock": {
+        "type": "object",
+        "description": "A block for a tenant entitlement instance that is manually toggled.",
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "type": "boolean",
+            "description": "Gets or sets the status."
+          }
+        }
+      },
+      "TenantFeatureState": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of a TenantFeatureState.",
+        "additionalProperties": false,
+        "properties": {
+          "tenantId": {
+            "type": "string",
+            "description": "Gets or sets the identifier of the Tenant that the TenantFeatureState corresponds to.",
+            "nullable": true
+          },
+          "featureId": {
+            "type": "string",
+            "description": "Gets or sets the identifier of the Service that the TenantFeatureState corresponds to.",
+            "nullable": true
+          },
+          "state": {
+            "type": "integer",
+            "description": "Gets or sets current state of this TenantFeatureState.",
+            "format": "int32"
+          }
+        }
+      },
+      "TenantServiceState": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of a TenantServiceState.",
+        "additionalProperties": false,
+        "properties": {
+          "tenantId": {
+            "type": "string",
+            "description": "Gets or sets the identifier of the Tenant that the TenantServiceState corresponds to.",
+            "nullable": true
+          },
+          "companyName": {
+            "type": "string",
+            "description": "Gets or sets the CompanyName that corresponds to the TenantId.",
+            "nullable": true
+          },
+          "serviceId": {
+            "type": "string",
+            "description": "Gets or sets the identifier of the Service that the TenantServiceState corresponds to.",
+            "nullable": true
+          },
+          "serviceName": {
+            "type": "string",
+            "description": "Gets or sets the Name that corresponds to the ServiceId.",
+            "nullable": true
+          },
+          "operationId": {
+            "type": "string",
+            "description": "Gets or sets the operation id associated with the action on the Tenant or Namespace.",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "description": "Gets or sets the region associated with the outstanding notification.",
+            "nullable": true
+          },
+          "action": {
+            "type": "string",
+            "description": "Gets or sets current TenantProvisioningState.",
+            "nullable": true
+          },
+          "responseCode": {
+            "description": "Gets or sets current ProvisioningNotificationResponseCode.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ProvisioningNotificationResponseCode"
+              }
+            ]
+          },
+          "responseText": {
+            "type": "string",
+            "description": "Gets or sets current response text corresponding to ResponseCode.",
+            "nullable": true
+          },
+          "created": {
+            "type": "string",
+            "description": "Gets or sets date and time the TenantServiceState was created.",
+            "format": "date-time"
+          },
+          "lastResponse": {
+            "type": "string",
+            "description": "Gets or sets date and time of last provisioning notification response.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastSent": {
+            "type": "string",
+            "description": "Gets or sets date and time of last profisioning notification request.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "configuration": {
+            "type": "object",
+            "description": "Gets the configuration dictionary sent with the provisioning notification request.",
+            "nullable": true,
+            "additionalProperties": {}
+          }
+        }
+      },
+      "ProvisioningNotificationResponseCode": {
+        "type": "integer",
+        "description": "Status codes describing the outcome of operations that effect a Tenant's Provisioning State.",
+        "x-enumNames": [
+          "None",
+          "NotHandled",
+          "Success",
+          "DoesNotExist",
+          "AlreadyAtRequestedState",
+          "Failure",
+          "InvalidAction",
+          "InvalidEntityType",
+          "InvalidConfiguration"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "NotificationsTestMessage": {
+        "type": "object",
+        "description": "A message to be queued in the notification system.",
+        "additionalProperties": false,
+        "properties": {
+          "tenantId": {
+            "type": "string",
+            "description": "Gets or sets the tenant Id for this message.",
+            "nullable": true
+          },
+          "action": {
+            "type": "string",
+            "description": "Gets or sets action associated with this message.",
+            "nullable": true
+          },
+          "service": {
+            "type": "string",
+            "description": "Gets or sets the service name for this message.",
+            "nullable": true
+          },
+          "configuration": {
+            "type": "object",
+            "description": "Gets the dictionary of configuration data for this message.",
+            "nullable": true,
+            "additionalProperties": {}
+          },
+          "region": {
+            "description": "Gets or sets the region of the service for this message.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Region"
+              }
+            ]
+          },
+          "isClientTest": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether gets or sets the test flag for this message."
+          }
+        }
+      },
+      "Namespace": {
+        "type": "object",
+        "description": "Representation of a server-side database interpretation of a Namespace.",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets name of this Namespace; unique within a Tenant's Namespaces.",
+            "pattern": "^(?=.{1,100}$)\\A(?!(_{2}|\\.+|\\s+))([A-Za-z0-9-_\\s]\\.?){1,}(?<!(\\.+|\\s+))\\Z",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "description": "Gets or sets the region that the namespace is provisioned in.",
+            "nullable": true
+          },
+          "self": {
+            "type": "string",
+            "description": "Gets or sets the namespace's URI.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Gets or sets description of this Namespace.",
+            "nullable": true
+          },
+          "state": {
+            "description": "Gets or sets current state of this Namespace.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/NamespaceProvisioningState"
+              }
+            ]
+          },
+          "owner": {
+            "description": "Gets or sets owner Trustee of this Namespace.",
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Trustee"
+              }
+            ]
+          },
+          "accessControl": {
+            "description": "Gets or sets the AccessControlList that defines Access Control for this Namespace.",
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AccessControlList"
+              }
+            ]
+          },
+          "instanceId": {
+            "type": "string",
+            "description": "Gets or sets the Instance ID for this Namespace.",
+            "nullable": true
+          }
+        }
+      },
+      "NamespaceProvisioningState": {
+        "type": "integer",
+        "description": "Status codes describing a Namespace's current Provisioning State.",
+        "x-enumNames": [
+          "Creating",
+          "Active",
+          "Deleting",
+          "Deleted"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    }
+  }
+}
