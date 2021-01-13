@@ -52,11 +52,11 @@ namespace ExampleParser
                         var response = client.GetStringAsync(value.Substring(1)).GetAwaiter().GetResult();
                         try
                         {
-                            valueObject = JsonSerializer.Deserialize<Dictionary<string, object>>(response);
+                            valueObject = response;
                         }
                         catch
                         {
-                            valueObject = JsonSerializer.Deserialize<string>(response); ;
+                            valueObject = JsonSerializer.Deserialize<string>(response);
                         }
                     }
 
@@ -66,7 +66,7 @@ namespace ExampleParser
                     }
                     else
                     {
-                        dictionary[keyValuePair.Key] = valueObject;
+                        dictionary[keyValuePair.Key] =  $"{valueObject}";
                     }
                 }
                 else if (obj.ValueKind.Equals(JsonValueKind.Array))
